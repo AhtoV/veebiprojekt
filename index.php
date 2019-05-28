@@ -13,5 +13,10 @@
 </head>
 
 <body>
+<section id="pais">
+
+</section>
+<section id="main">
+</section>
 </body>
 </html>
