@@ -1,10 +1,13 @@
+<?php 
+ ?>
+
 <!DOCTYPE html>
 <html>
 <head>
 <title>Rimakas24</title>
 
 <!--CSS-->
-<link rel="stylesheet" href="stylesheet.css">
+<link rel="stylesheet" href="stiil.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <!--JS-->
@@ -17,6 +20,29 @@
 
 </section>
 <section id="main">
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+        </div>
+        <div class="col-sm">
+          <form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Mark</label>
+    <input type="mark" class="form-control" id="exampleInputEmail1" aria-describedby="markHelp" placeholder="Sisestage mark">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Mudel</label>
+    <input type="mudel" class="form-control" id="exampleInputPassword1" placeholder="sisestage mudel">
+  </div>
+  <button type="submit" class="btn btn-primary">Otsi</button>
+</form>
+        </div>
+        <div class="col-sm">
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 </body>
 </html>
