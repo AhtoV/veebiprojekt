@@ -1,5 +1,11 @@
-<?php 
- ?>
+<?php
+include 'connection.php';
+$query = $conn->query("SELECT * FROM mark");
+
+while($array[] = $query->fetch_object());
+
+array_pop($array);
+?>
 
 <!DOCTYPE html>
 <html>
@@ -31,6 +37,11 @@
     <label for="exampleInputEmail1">Mark</label>
     <input type="mark" class="form-control" id="exampleInputEmail1" aria-describedby="markHelp" placeholder="Sisestage mark">
   </div>
+  <select class="form-control" name="mark">
+    <?php foreach($array as $option) : ?>
+      <option value="<?php echo $option->ID; ?>"><?php echo $option->nimi; ?></option>
+    <?php endforeach; ?>
+  </select>
   <div class="form-group">
     <label for="exampleInputPassword1">Mudel</label>
     <input type="mudel" class="form-control" id="exampleInputPassword1" placeholder="sisestage mudel">
