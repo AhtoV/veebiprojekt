@@ -1,10 +1,11 @@
 <?php
 include 'connection.php';
 $query = $conn->query("SELECT * FROM mark");
-
+$query2 = $conn->query("SELECT * FROM mudel");
 while($array[] = $query->fetch_object());
-
+while($array2[] = $query2->fetch_object());
 array_pop($array);
+array_pop($array2);
 ?>
 
 <!DOCTYPE html>
@@ -33,19 +34,18 @@ array_pop($array);
         </div>
         <div class="col-sm">
           <form>
-  <div class="form-group">
     <label for="exampleInputEmail1">Mark</label>
-    <input type="mark" class="form-control" id="exampleInputEmail1" aria-describedby="markHelp" placeholder="Sisestage mark">
-  </div>
   <select class="form-control" name="mark">
     <?php foreach($array as $option) : ?>
       <option value="<?php echo $option->ID; ?>"><?php echo $option->nimi; ?></option>
     <?php endforeach; ?>
   </select>
-  <div class="form-group">
     <label for="exampleInputPassword1">Mudel</label>
-    <input type="mudel" class="form-control" id="exampleInputPassword1" placeholder="sisestage mudel">
-  </div>
+    <select class="form-control" name="mudel">
+      <?php foreach($array2 as $option) : ?>
+        <option value="<?php echo $option->ID; ?>"><?php echo $option->nimi; ?></option>
+      <?php endforeach; ?>
+    </select>
   <button type="submit" class="btn btn-primary">Otsi</button>
 </form>
         </div>
