@@ -34,17 +34,27 @@ array_pop($array2);
         </div>
         <div class="col-sm">
           <form>
-    <label for="exampleInputEmail1">Mark</label>
+    <label for="inputMark">Mark</label>
   <select class="form-control" name="mark">
-    <?php foreach($array as $option) : ?>
-      <option value="<?php echo $option->ID; ?>"><?php echo $option->nimi; ?></option>
-    <?php endforeach; ?>
+  <?php
+  foreach ($array as $option) :
+    echo '<option value="echo $option->ID;">';
+    echo $option->nimi;
+    echo "</option>";
+  endforeach;
+  ?>
   </select>
-    <label for="exampleInputPassword1">Mudel</label>
+    <label for="inputMudel">Mudel</label>
     <select class="form-control" name="mudel">
-      <?php foreach($array2 as $option) : ?>
-        <option value="<?php echo $option->ID; ?>"><?php echo $option->nimi; ?></option>
-      <?php endforeach; ?>
+      <?php
+        if($option->ID = "2") {
+          foreach ($array2 as $option) :
+            echo '<option value="echo $option->ID;">';
+            echo $option->nimi;
+            echo "</option>";
+          endforeach;
+        }
+      ?>
     </select>
   <button type="submit" class="btn btn-primary">Otsi</button>
 </form>
